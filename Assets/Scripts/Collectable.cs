@@ -6,13 +6,14 @@ public class Collectable : MonoBehaviour
 {
 
     public CollectableType type;
+    public Sprite icon;
     private void OnTriggerEnter2D(Collider2D collision)
     {
         PlayerScript player = collision.GetComponent<PlayerScript>();
 
         if(player)
         {
-            player.inventory.Add(type);
+            player.inventory.Add(this);
             Destroy(this.gameObject);
         }
     }
