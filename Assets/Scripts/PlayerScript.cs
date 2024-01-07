@@ -4,5 +4,10 @@ using UnityEngine;
 
 public class PlayerScript : MonoBehaviour
 {
-   public int carrotSeedsCount = 0;
+    public Inventory inventory;
+
+    private void Awake()
+    {
+        inventory = new Inventory(21);
+    }
 }
