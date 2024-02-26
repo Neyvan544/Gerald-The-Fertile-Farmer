@@ -594,7 +594,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a601f9d5c1bb05c499aefeff4c7b1279, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  collectableItems:
+  items:
   - {fileID: 7872437414948572466, guid: dc09560577c6b7841a2aadf7af07de52, type: 3}
 --- !u!114 &342312312
 MonoBehaviour:
@@ -23077,7 +23077,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 3
+  m_SortingOrder: 5
   m_Sprite: {fileID: 1730805347, guid: f9d76de4ae48c0d4f8ebe96b5b2b16c8, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
