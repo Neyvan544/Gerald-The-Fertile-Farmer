@@ -4,13 +4,14 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    public Inventory inventory;
+    public InventoryManager inventory;
+
 
 
 
     private void Awake()
     {
-        inventory = new Inventory(24);
+        inventory = GetComponent<InventoryManager>();
         
     }
 
