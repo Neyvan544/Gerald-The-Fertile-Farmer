@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 1383557149686619153}
   - component: {fileID: 7872437414948572466}
   m_Layer: 0
-  m_Name: Collectable
+  m_Name: Carrot_Seed
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
