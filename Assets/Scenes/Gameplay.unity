@@ -1372,7 +1372,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   interactableMap: {fileID: 1604659329}
   hiddenInteractableTile: {fileID: 11400000, guid: f6aef1805ab60aa44947f94996cde4a0, type: 2}
-  interactedTile: {fileID: 11400000, guid: eaa58646fc7adad428a15d3dca9f4486, type: 2}
+  plowedTile: {fileID: 11400000, guid: eaa58646fc7adad428a15d3dca9f4486, type: 2}
 --- !u!114 &342312313
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9290,7 +9290,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 67ef8ec70084ded40add4621bb61ad6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  inventory: {fileID: 0}
+  inventoryManager: {fileID: 956785744}
 --- !u!114 &956785744
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9305,9 +9305,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   backpack:
     slots: []
+    selectedSlot:
+      itemName: 
+      count: 0
+      maxAllowed: 99
+      icon: {fileID: 0}
   backpackSlotCount: 24
   toolbar:
     slots: []
+    selectedSlot:
+      itemName: 
+      count: 0
+      maxAllowed: 99
+      icon: {fileID: 0}
   toolbarSlotCount: 9
 --- !u!1001 &1006122883
 PrefabInstance:

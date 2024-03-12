@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Toolbar_UI: MonoBehaviour
 {
-    [SerializeField] private List<Slot_UI> toolbarSlots = new List<Slot_UI>();
+    public List<Slot_UI> toolbarSlots = new List<Slot_UI>();
 
     private Slot_UI selectedSlot;
 
@@ -17,6 +17,12 @@ public class Toolbar_UI: MonoBehaviour
     {
         CheckAlphaNumericKeys();
     }
+
+    public void SelectSlot(Slot_UI slot)
+    {
+        SelectSlot(slot.slotID);
+    }
+
     public void SelectSlot(int index)
     {
         if(toolbarSlots.Count == 9)
@@ -27,6 +33,8 @@ public class Toolbar_UI: MonoBehaviour
             }
             selectedSlot = toolbarSlots[index];
             selectedSlot.SetHighlight(true);
+
+            GameManager.instance.player.inventoryManager.toolbar.SelectSlot(index);
         }
     }
 

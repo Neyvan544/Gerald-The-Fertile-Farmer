@@ -56,8 +56,6 @@ public class Inventory
             this.maxAllowed = maxAllowed;
         }
 
-
-
         public void RemoveItem()
         {
             if(count > 0)
@@ -75,6 +73,7 @@ public class Inventory
     }
 
     public List<Slot> slots = new List<Slot>();
+    public Slot selectedSlot = null;
 
     public Inventory(int numSlots)
     {
@@ -123,16 +122,27 @@ public class Inventory
 
     public void MoveSlot(int fromindex, int toindex, Inventory toInventory, int numToMove = 1)
     {
-        Slot fromSlot = slots[fromindex];
-        Slot toSlot = toInventory.slots[toindex];
-
-        if(toSlot.IsEmpty || toSlot.CanAddItem(fromSlot.itemName))
+        if (slots != null && slots.Count > 0)
         {
-            for (int i = 0; i < numToMove; i++)
+            Slot fromSlot = slots[fromindex];
+            Slot toSlot = toInventory.slots[toindex];
+
+            if (toSlot.IsEmpty || toSlot.CanAddItem(fromSlot.itemName))
             {
-                toSlot.AddItem(fromSlot.itemName, fromSlot.icon, fromSlot.maxAllowed);
-                fromSlot.RemoveItem(); 
+                for (int i = 0; i < numToMove; i++)
+                {
+                    toSlot.AddItem(fromSlot.itemName, fromSlot.icon, fromSlot.maxAllowed);
+                    fromSlot.RemoveItem();
+                }
             }
+        }
+    }
+
+    public void SelectSlot(int index)
+    {
+        if(slots != null && slots.Count > 0)
+        {
+            selectedSlot = slots[index];
         }
     }
 }
